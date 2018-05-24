@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "CSChatThai";
+    src: url("fonts/CSChatThai.ttf");
+}
+
+@font-face {
+    font-family: "CSChatThaiUI";
+    src: url("fonts/CSChatThaiUI.ttf");
+}
+
+@font-face {
+    font-family: "Bansomdej";
+    src: url("fonts/Bansomdej.ttf");
+}
+
+.CSChatThai {
+    font-family: 'CSChatThai';
+}
+
+.CSChatThaiUI {
+    font-family: 'CSChatThaiUI';
+}
+
+.Bansomdej {
+    font-family: 'Bansomdej';
+}

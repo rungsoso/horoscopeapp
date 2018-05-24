@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>เซียมซี</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/template/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="/template/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+        rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Pridi" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/template/css/font.css" rel="stylesheet">
+    <link href="/template/css/clean-blog.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/assets/custom/images/favicon.ico" />
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-xs-12 mx-auto pb-2">
+                <% if (Horoscope.temple.temple_photo != null) { %>
+                    <img src="../../<%= Horoscope.temple.temple_photo.replace('public\\', '') %>" class="img-fluid" />
+                    <% } %>
+            </div>
+        </div>
+        <!-- <div class="row p-3">
+            <div class="col-lg-8 col-md-12 col-xs-12 mx-auto">
+                        <h3>ใบเซียมซี ที่
+                            <%= Horoscope.horoscopeno %>
+                        </h3>
+            </div>
+        </div> -->
+        <div class="row p-3">
+            <div class="col-lg-8 col-md-12 col-xs-12 mx-auto text-center">
+                <% if (Horoscope.horoscope_photo != null) { %>
+                    <img src="../../<%= Horoscope.horoscope_photo.replace('public\\', '') %>" class="img-fluid" />
+                    <% } %>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 col-xs-12 mx-auto">
+                        <div class="sharethis-inline-share-buttons"></div>
+                        <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 contactus">
+                        สนใจระบบ QR ติดต่อ 061 631 9753 ฟรี!!
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="/template/vendor/jquery/jquery.min.js"></script>
+        <script src="/template/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="/template/js/clean-blog.min.js"></script>
+        <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5aa286205df0b9001309effa&product=inline-share-buttons"></script>
+</body>
+
+</html>

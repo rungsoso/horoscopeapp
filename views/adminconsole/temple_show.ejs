@@ -1,0 +1,264 @@
+<!-- views/adminconsole/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<!-- begin::Head -->
+
+<head>
+    <% include ../partials/head %>
+</head>
+<!-- end::Head -->
+<!-- end::Body -->
+
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+    <!-- begin:: Page -->
+    <div class="m-grid m-grid--hor m-grid--root m-page">
+        <!-- BEGIN: Header -->
+        <% include ../partials/header %>
+            <!-- END: Header -->
+            <!-- begin::Body -->
+            <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+                <!-- BEGIN: Left Aside -->
+                <% include ../partials/menu %>
+                    <!-- END: Left Aside -->
+                    <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                        <!-- BEGIN: Subheader -->
+                        <div class="m-subheader ">
+                            <div class="d-flex align-items-center">
+                                <div class="mr-auto">
+                                    <h3 class="m-subheader__title m-subheader__title--separator">
+                                        จัดการข้อมูลรายชื่อวัด
+                                    </h3>
+                                    <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                                        <li class="m-nav__item m-nav__item--home">
+                                            <a href="#" class="m-nav__link m-nav__link--icon">
+                                                <i class="m-nav__link-icon la la-home"></i>
+                                            </a>
+                                        </li>
+                                        <li class="m-nav__separator">
+                                            -
+                                        </li>
+                                        <li class="m-nav__item">
+                                            <a href="" class="m-nav__link">
+                                                <span class="m-nav__link-text">
+                                                    จัดการข้อมูลรายชื่อวัด
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END: Subheader -->
+                        <div class="m-content">
+                            <!--begin::Portlet-->
+                            <div class="m-portlet">
+                                <div class="m-portlet__head">
+                                    <div class="m-portlet__head-caption">
+                                        <div class="m-portlet__head-title">
+                                            <span class="m-portlet__head-icon">
+                                                <i class="flaticon-file-1"></i>
+                                            </span>
+                                            <h3 class="m-portlet__head-text">
+                                                รายละเอียดข้อมูลรายชื่อวัด
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--begin::Form-->
+                                <form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed m_form_delete" action="/adminconsole/temple_delete/<%= Temple._id%>"
+                                    method="post">
+                                    <div class="m-portlet__body">
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-12">
+                                                <label class="font-weight-bold">
+                                                    ชื่อวัด
+                                                </label>
+                                                <div>
+                                                    <%= Temple.templeName %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-12">
+                                                <label class="font-weight-bold">
+                                                    คำอธิบายเกี่ยวกับวัด
+                                                </label>
+                                                <div>
+                                                    <%= Temple.templeExplain %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-12">
+                                                <label class="font-weight-bold">
+                                                    ที่อยู่
+                                                </label>
+                                                <div>
+                                                    <%= Temple.address %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    ตำบล
+                                                </label>
+                                                <div>
+                                                    <%= Temple.tambol %>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    อำเภอ
+                                                </label>
+                                                <div>
+                                                    <%= Temple.district %>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    จังหวัด:
+                                                </label>
+                                                <div>
+                                                    <%= Temple.province %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    รหัสไปรษณีย์
+                                                </label>
+                                                <div>
+                                                    <%= Temple.postcode %>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    โทรศัพท์
+                                                </label>
+                                                <div>
+                                                    <%= Temple.phone %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    ชื่อผู้ติดต่อ
+                                                </label>
+                                                <div>
+                                                    <%= Temple.contactsName %>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    โทรศัพท์
+                                                </label>
+                                                <div>
+                                                    <%= Temple.contactsPhone %>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <label class="font-weight-bold">
+                                                    อีเมล์
+                                                </label>
+                                                <div>
+                                                    <%= Temple.contactsEmail %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-4">
+                                                <label class="">
+                                                    สถานะการใช้งาน:
+                                                </label>
+                                                <div class="m-radio-inline">
+                                                    <label class="m-radio m-radio--solid">
+                                                        <% if (Temple.status == true) { %>
+                                                            <input type="radio" name="status" checked value="true"> ใช้งาน
+                                                            <% } else { %>
+                                                                <input type="radio" name="status" value="true"> ใช้งาน
+                                                                <% } %>
+                                                                    <span></span>
+                                                    </label>
+                                                    <label class="m-radio m-radio--solid">
+                                                        <% if (Temple.status == false) { %>
+                                                            <input type="radio" name="status" checked value="false"> ระงับการใช้งาน
+                                                            <% } else { %>
+                                                                <input type="radio" name="status" value="false"> ระงับการใช้งาน
+                                                                <% } %>
+                                                                    <span></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-form__group row">
+                                            <div class="col-lg-12">
+                                                <label class="font-weight-bold">
+                                                    รูปวัด
+                                                </label>
+                                                <div class="text-center">
+                                                    <% if (Temple.temple_photo != null) { %>
+                                                        <a href="../../<%= Temple.temple_photo.replace('public\\', '') %>" target="_blank">
+                                                            <img src="../../<%= Temple.temple_photo.replace('public\\', '') %>" height="250" />
+                                                        </a>
+                                                        <% } %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
+                                        <div class="m-form__actions m-form__actions--solid">
+                                            <div class="row">
+                                                <div class="col-lg-4"></div>
+                                                <div class="col-lg-8">
+                                                    <a class="btn btn-primary block-ui" href="/adminconsole/temple_edit/<%= Temple._id%>">
+                                                        <i class="fa fa-edit"></i> แก้ไขรายการ</a>
+                                                    <button type="submit" class="btn btn-danger block-ui">
+                                                        <i class="fa fa-trash-o"></i> ลบรายการ
+                                                    </button>
+                                                    <a class="btn btn-secondary block-ui" href="/adminconsole/temple_list/">
+                                                        <i class="fa fa-reply-all"></i> กลับหน้ารายการ</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <!--end::Form-->
+                            </div>
+                            <!--end::Portlet-->
+                        </div>
+                    </div>
+            </div>
+            <!-- end:: Body -->
+            <!-- begin::Footer -->
+            <% include ../partials/footer %>
+                <!-- end::Footer -->
+    </div>
+    <!-- end:: Page -->
+    <!-- begin::Bottom -->
+    <% include ../partials/bottom %>
+        <!-- end::Bottom -->
+
+        <script>
+            $(document).ready(function () {
+                // notification
+                
+
+                // Confirm delete.
+                $('.m_form_delete').submit(function (e) {
+                    var currentForm = this;
+                    e.preventDefault();
+                    bootbox.confirm("ยืนยันลบรายการ?", function (result) {
+                        if (result) {
+                            currentForm.submit();
+                        }
+                    });
+                });
+            });
+        </script>
+</body>
+<!-- end::Body -->
+
+</html>

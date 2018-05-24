@@ -1,0 +1,41 @@
+<!-- views/partials/footer.ejs -->
+<!-- begin::Scroll Top -->
+<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+    <i class="la la-arrow-up"></i>
+</div>
+<!-- end::Scroll Top -->
+<!--begin::Base Scripts -->
+<!-- vendors -->
+<script src="/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+<!-- bootstrap-datepicker-thai -->
+<script src="/assets/custom/bootstrap-datepicker-thai/bootstrap-datepicker.min.js"></script>
+<script src="/assets/custom/bootstrap-datepicker-thai/bootstrap-datepicker-thai.min.js"></script>
+<script src="/assets/custom/bootstrap-datepicker-thai/locales/bootstrap-datepicker.th.min.js"></script>
+<!-- bootstrap-fileinput -->
+<script src="/assets/custom/bootstrap-fileinput/js/fileinput.min.js"></script>
+<script src="/assets/custom/bootstrap-fileinput/themes/explorer-fa/theme.min.js"></script>
+<script src="/assets/custom/bootstrap-fileinput/themes/fa/theme.min.js"></script>
+<!-- bootbox -->
+<script src="/assets/custom/bootbox/bootbox.min.js"></script>
+<!-- jquery.print -->
+<script src="/assets/custom/jquery.print/jquery.print.min.js"></script>
+<!-- demo -->
+<script src="/assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+<!-- custom -->
+<script src="/assets/custom/app.js"></script>
+<!--end::Base Scripts -->
+<% if (typeof msgSuccess !== 'undefined' && msgSuccess) { %>
+    <script>
+        swal("Success", "<%= msgSuccess %>", "success");
+    </script>
+<% } %>
+<% if (typeof msgError !== 'undefined' && msgError) { %>
+    <script>
+        swal("Error", "<%= msgError %>", "error");
+    </script>
+<% } %>
+<% if (typeof msgWarning !== 'undefined' && msgWarning) { %>
+    <script>
+        swal("Warning", "<%= msgWarning %>", "warning");
+    </script>
+<% } %>
