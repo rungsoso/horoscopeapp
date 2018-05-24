@@ -164,7 +164,7 @@ adminconsoleController.horoscope_list = function (req, res) {
         }
         else {
           var _status = req.query.status;
-          var host = req.get('host');
+          var host = "http://" + req.get('host');
           if (_status == "success") {
             res.render("../views/adminconsole/horoscope_list", { horoscopes: horoscopes, temples: temples, host: host, templechecked: templechecked, msgSuccess: msgCompleted });
           }
@@ -188,7 +188,7 @@ adminconsoleController.horoscope_show = function (req, res) {
     }
     else {
       var _status = req.query.status;
-      var host = req.get('host');
+      var host = "http://" + req.get('host');
       if (_status == "success") {
         res.render("../views/adminconsole/horoscope_show", { Horoscope: Horoscope, host: host, msgSuccess: msgCompleted });
       }
